@@ -35,7 +35,6 @@ def handle_client(client):  # Takes client socket as argument.
             broadcast(bytes("%s has left the chat." % name, "utf8"))
             break
 
-
 def broadcast(msg, prefix=""):  # prefix is for name identification.
     """Broadcasts a message to all the clients."""
 
@@ -47,7 +46,7 @@ clients = {}
 addresses = {}
 
 HOST = ''
-PORT = 33000
+PORT = int(input("PORT:"))
 BUFSIZ = 1024
 ADDR = (HOST, PORT)
 
